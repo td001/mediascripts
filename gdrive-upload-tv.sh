@@ -8,7 +8,7 @@ fi
 
 LOGFILE="/home/tom/logs/gdrive-upload-tv.log"
 FROM="/home/tom/SonarrDownloads/"
-FROM="/home/tom/TorrentShare/SonarrDownloads/"
+#FROM="/home/tom/TorrentShare/SonarrDownloads/"
 #TO="/home/tom/mnt/gdrive/TV/"
 TO="crypt2:/TV"
 CONFIG="/home/tom/.config/rclone/rclone.conf"

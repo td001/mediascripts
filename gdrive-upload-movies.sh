@@ -8,7 +8,7 @@ fi
 
 LOGFILE="/home/tom/logs/gdrive-upload-movies.log"
 FROM="/home/tom/RadarrDownloads"
-FROM="/home/tom/TorrentShare/RadarrDownloads"
+#FROM="/home/tom/TorrentShare/RadarrDownloads"
 #TO="/home/tom/mnt/gdrive/Movies/"
 TO="crypt2:/Movies"
 CONFIG="/home/tom/.config/rclone/rclone.conf"
