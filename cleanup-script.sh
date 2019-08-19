@@ -1,6 +1,6 @@
 #!/bin/bash
 #This script cleans up any empty directories and also deletes logfiles so they don't get too large. 
-#Also a section to remove unused docker volumes.
+#Also added a section to remove unused docker volumes.
 
 if pidof -o %PPID -x “cleanup-script.sh”; then
 exit 1
