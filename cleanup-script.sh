@@ -21,5 +21,4 @@ find /home/tom/RadarrDownloads/* -maxdepth 1 -type d -empty -delete find /home/t
 #Docker cleanup
 docker system prune -f --volumes
 
-
 echo "$(date "+%d.%m.%Y %T") CLEANUP FINISHED IN $(($(date +'%s') - $start)) SECONDS" | tee -a $LOGFILE
