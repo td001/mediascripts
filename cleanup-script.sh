@@ -14,11 +14,12 @@ start=$(date +'%s')
 
 echo "$(date "+%d.%m.%Y %T") BEGIN CLEANUP" | tee -a $LOGFILE
 
-#Run cleanup and delete empty directories
-find /home/tom/RadarrDownloads/* -maxdepth 1 -type d -empty -delete find /home/tom/SonarrDownloads/* -maxdepth 1 -type d -empty -delete find /home/tom/logs 
--type f \( -name "*.log" \) -size +10M -delete -print
-
 #Docker cleanup
 docker system prune -f --volumes
+
+#Run cleanup
+find /home/tom/TorrentShare/RadarrDownloads/* -maxdepth 1 -type d -empty -delete
+find /home/tom/TorrentShare/SonarrDownloads/* -maxdepth 1 -type d -empty -delete
+find /home/tom/logs -type f \( -name "*.log" \) -size +10M -delete -print
 
 echo "$(date "+%d.%m.%Y %T") CLEANUP FINISHED IN $(($(date +'%s') - $start)) SECONDS" | tee -a $LOGFILE
